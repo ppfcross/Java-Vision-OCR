@@ -2,7 +2,7 @@
 Connect to Google Vision with Java
 
 In HttpConn, you need to change 
-1.API_KEY 
+1.API_KEY <br/>
 2.saveFileLocation for the JSON response output, or you can just delete it.
 3.PictureLocation with the pic you want to analysis
 
