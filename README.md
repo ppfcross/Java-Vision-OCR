@@ -6,8 +6,8 @@ In HttpConn, you need to change <br/>
 2.saveFileLocation for the JSON response output, or you can just delete it.<br/>
 3.PictureLocation with the pic you want to analysis. <br/>
 
-If you need to change the json form you need to change code in VisionJSONController.<br/>
-can find the form here https://cloud.google.com/vision/docs/request?hl=zh-tw#providing_the_image<br/>
+If you need to change the json form you need , they are in VisionJSONController.<br/>
+You can find the form for JSON here https://cloud.google.com/vision/docs/request?hl=zh-tw#providing_the_image<br/>
 Hope you have fun with it.
 
 Reference:<br/>
