@@ -5,26 +5,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class VisionJSONController{
-	public static void main(String args[]) {
-		JSONObject jsonO1 = new JSONObject();		//當最底層用
-		JSONObject jsonO2 = new JSONObject();		//當第二層用
-		JSONObject jsonO3 = new JSONObject();		//當最外層用
-		JSONObject jsonO4 = new JSONObject();
-		try {
-			jsonO1.put("imageUri", "https://i.imgur.com/a87eDVH.jpg");	//put => {key : value}
-			jsonO2.put("source", jsonO1);
-			jsonO3.put("image", jsonO2);
-			jsonO2 = new JSONObject(); 			//清空，也有remove方法
-			jsonO2.put("type", "TEXT_DETECTION");
-			jsonO3.put("features", new JSONArray().put(jsonO2));		//append => {key : [value]}
-			jsonO4.put("requests", new JSONArray().put(jsonO3));
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-		
-		System.out.println(jsonO4);
-	}
-	
 	public JSONObject setJson(String picLocation) {
 		File f = new File(picLocation);
 		//將圖片變成Bas64
@@ -35,14 +15,14 @@ public class VisionJSONController{
 		JSONObject jsonO3 = new JSONObject();		//當最外層用
 		JSONObject jsonO4 = new JSONObject();		//當最外層用
 		try {
-			/*
+			/*	//使用encode
 			jsonO1.put("content", encodstring);	//put => {key : value}
 			jsonO2.put("image", jsonO1);
 			jsonO1 = new JSONObject(); 			//清空，也有remove方法
 			jsonO1.put("type", "TEXT_DETECTION");
 			jsonO2.append("features", jsonO1);		//append => {key : [value]}
 			jsonO3.append("requests", jsonO2);*/
-			
+			//使用URL
 			jsonO1.put("imageUri", "https://i.imgur.com/a87eDVH.jpg");	//put => {key : value}
 			jsonO2.put("source", jsonO1);
 			jsonO3.put("image", jsonO2);
