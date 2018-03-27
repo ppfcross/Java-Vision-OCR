@@ -7,7 +7,7 @@ import org.json.JSONObject;
 public class VisionJSONController{
 	public JSONObject setJson(String picLocation) {
 		File f = new File(picLocation);
-		//將圖片變成Bas64
+		//將圖片變成Base64
 		String encodstring = new EncodeFileToBase64Binary().getBase64(f);
 		//建立JSON物件
 		JSONObject jsonO1 = new JSONObject();		//當最底層用
