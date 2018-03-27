@@ -15,7 +15,7 @@ public class VisionJSONController{
 		JSONObject jsonO3 = new JSONObject();		//當最外層用
 		JSONObject jsonO4 = new JSONObject();		//當最外層用
 		try {
-			/*	//使用encode
+			/*	 //使用encode
 			jsonO1.put("content", encodstring);	//put => {key : value}
 			jsonO2.put("image", jsonO1);
 			jsonO1 = new JSONObject(); 			//清空，也有remove方法
